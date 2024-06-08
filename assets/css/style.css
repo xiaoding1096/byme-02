@@ -4,6 +4,7 @@
 
 :root {
     --font-heading: sen, sans-serif;
+    --primary-color: #ffb900;
 }
 
 html {
@@ -38,6 +39,21 @@ a {
     height: 50px;
     border-radius: 24.5px;
     background: #171100;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
 }
 /*====================== header ======================*/
 .header {
@@ -221,6 +237,8 @@ a {
 
 .hero .cta-group {
     margin-top: 38px;
+    display: flex;
+    align-items: center;
 }
 
 .hero .cta-group .see-courses-btn {
@@ -247,6 +265,7 @@ a {
 .hero .cta-group .play-icon {
     width: 40px;
     height: 40px;
+    font-size: 3rem;
     background-color: #fff;
     border-radius: 50%;
     padding: 8px;
@@ -281,4 +300,589 @@ a {
 }
 .hero .stats strong:nth-child(2) {
     margin-left: 28px;
+}
+
+/*====================== popular section ======================*/
+.popular .body {
+    padding: 65px 0;
+    margin: 135px 0;
+}
+
+/*====================== popular top section ======================*/
+.popular .popular-top {
+    display: flex;
+    align-items: center;
+}
+
+.popular .popular-top .heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.76px;
+}
+
+.popular .popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6; /* 166.667% */
+}
+
+.popular .popular-top .control {
+    margin-left: auto;
+}
+
+.popular .popular-top img {
+    width: 30px;
+    height: 30px;
+}
+
+.popular .popular-top .control-btn {
+    width: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.popular .popular-top .control-btn:hover {
+    opacity: 0.6;
+}
+/*====================== popular down section ======================*/
+
+.popular .popular-dow {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.popular .popular-dow .courses-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+.popular .popular-dow .courses-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .courses-item .courses-image {
+    width: calc(100% + 2px);
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+    margin: -1px;
+}
+
+.popular .courses-item .info {
+    padding: 16px 22px 22px;
+    width: 370px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #fff;
+    /* box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.popular .courses-item .name-rate,
+.popular .courses-item .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .courses-item .rate {
+    color: #ffb900;
+}
+
+.popular .courses-item .courses-name {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6;
+    padding-right: 6px;
+}
+
+.popular .courses-item .icon-courses-img {
+    margin-left: auto;
+    margin-right: 6px;
+}
+
+.popular .courses-item .desc {
+    margin-top: 6px;
+    width: 326px;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.popular .courses-item .prices-book-now {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.popular .courses-item .book-now {
+    margin-left: auto;
+    border-radius: 25px;
+    background: #171100;
+    border: none;
+}
+
+.popular .courses-item .book-now:hover {
+    background: #ffb900;
+    cursor: pointer;
+}
+
+/*====================== Feed Back section ======================*/
+
+.feedback {
+    margin: 135px 0;
+    padding: 65px 0;
+    background: #2e2100;
+}
+
+.feedback .feedback-body {
+    padding: 96px 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+}
+/*====================== Feed Back left section ======================*/
+.feedback .feedback-left {
+    width: 35%;
+}
+
+.feedback .feedback-left .avt-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .feedback-left .avt-title {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.feedback .feedback-left .avt-desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.feedback .feedback-left .dots {
+    margin-top: 28px;
+    display: flex;
+}
+
+.feedback .dots .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.feedback .dot.active {
+    background: #ffb900;
+    cursor: default;
+}
+
+/*====================== Feed Back right section ======================*/
+
+.feedback .feedback-right {
+    width: 65%;
+}
+
+.feedback .feedback-right .quotes {
+    margin-left: 30px;
+}
+
+.feedback .feedback-right block-quotes {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.53; /* 153.846% */
+}
+
+/*====================== Feature section 1======================*/
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.features .features-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*====================== Feature left section ======================*/
+.features .features-left {
+    display: flex;
+}
+.features .features-left .img-1 {
+    margin-top: 34px;
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .features-left .img-2 {
+    margin-left: 30px;
+    width: 270px;
+    height: 405px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/*====================== Feature right section ======================*/
+.features .features-right {
+    width: 41%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.features .features-right .heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.features .features-right .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.features .features-right .features-btn {
+    margin-top: 32px;
+    min-width: 137px;
+    border: none;
+    border-radius: 26px;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+/*====================== Feature section 2======================*/
+
+.features-2nd {
+    margin-top: 70px;
+}
+
+.features-2nd .features-body {
+    flex-direction: row-reverse;
+}
+
+/*====================== Feature left section 2======================*/
+.features-2nd .features-right {
+    width: 49%;
+}
+
+/*====================== Feature right section 2======================*/
+.features-2nd .features-left {
+    width: 40%;
+}
+
+.features-2nd .features-left .img-1 {
+    width: 470px;
+    height: 440px;
+}
+
+/*====================== Blog Section ======================*/
+
+.blog {
+    padding: 65px 0;
+    margin-top: 135px;
+    background: #fffcf4;
+}
+
+.blog .blog-top {
+    text-align: center;
+}
+
+.blog .blog-top .heading {
+    padding-top: 96px;
+    color: #130606;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.blog .blog-top .desc {
+    margin: 16px auto 0;
+    color: #696262;
+    width: 448px;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+/*====================== Blog list Section ======================*/
+
+.blog .blog-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 0 30px;
+    overflow: hidden;
+}
+
+.blog .blog-list .item {
+    width: calc(33.33% - 20px);
+    border-radius: 16px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.blog .blog-list .item:hover {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-list .info {
+    padding: 20px 30px 28px;
+}
+
+.blog .blog-list .date {
+    position: relative;
+    padding-bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+}
+
+.blog .item .date::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin-right: 4px;
+}
+
+.blog .item .date::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: -27px;
+    bottom: 0;
+
+    height: 1px;
+    border-radius: 0.5px;
+    background: #e2dfda;
+}
+
+.blog .img-thumb {
+    width: 100%;
+    height: 250px;
+    border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
+}
+
+.blog .title {
+    padding: 12px 0;
+}
+
+.blog .title a {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.blog .blog-list .blog-btn {
+    display: inline-block;
+    line-height: 50px;
+    border-radius: 25px;
+    background: #171100;
+    font-size: 1.4rem;
+}
+
+.blog .blog-list .blog-btn:hover {
+    background: var(--primary-color);
+}
+
+.blog .dots {
+    display: flex;
+    margin-top: 38px;
+    gap: 0 6px;
+    justify-content: center;
+}
+
+.blog .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #5f5b53;
+}
+
+.blog .dots .dot.active {
+    background: #ffb900;
+    cursor: default;
+}
+
+/*====================== Footer Section ======================*/
+
+.footer {
+    background: #2e2100;
+}
+
+.footer .row-footer {
+    display: flex;
+    padding: 96px 0 28px;
+    border-bottom: 1px solid #59554b;
+}
+
+/*====================== Footer Column Common Section ======================*/
+.footer ul li {
+    margin: 12px 0;
+}
+
+.footer .list:last-child li {
+    margin-bottom: 0;
+}
+
+.footer .heading {
+    position: relative;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.footer .column .heading::after {
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+
+    content: "";
+    display: inline-block;
+    width: 130px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #59554b;
+}
+
+.footer .desc {
+    color: #bfbcb2;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: 1.85; /* 185.714% */
+}
+
+.footer .list {
+    margin-top: 28px;
+}
+
+.footer .list a {
+    color: #bfbcb2;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: 1.85; /* 185.714% */
+}
+
+/*====================== Footer Column 1 Section ======================*/
+.footer .socials a {
+    color: #fff;
+    margin-right: 18px;
+}
+
+.footer .column:nth-of-type(1) {
+    width: 35%;
+}
+
+.footer .column:nth-of-type(1) .desc {
+    max-width: 267px;
+    margin: 18px 0 18px;
+}
+
+/*====================== Footer Column 2 Section ======================*/
+.footer .column:nth-of-type(2) {
+    width: 21.6%;
+}
+
+/*====================== Footer Column 3 Section ======================*/
+.footer .column:nth-of-type(3) {
+    width: 21.6%;
+}
+
+/*====================== Footer Column 4 Section ======================*/
+.footer .column:nth-of-type(4) {
+    width: 21.6%;
+}
+
+.footer .column:nth-of-type(4) .desc {
+    width: 231px;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.26;
+}
+
+.footer strong {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.85; /* 185.714% */
+}
+
+.footer .copy-right {
+    margin-top: 28px;
+    text-align: center;
+    padding-bottom: 28px;
 }
